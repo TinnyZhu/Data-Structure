@@ -47,6 +47,8 @@ class LinkedList:
 			new_information={key:new_unit}
 			self.element.update(new_information)
 			if len(self.element)>self.len:
+				self.element.pop(self.tail.prev.key)
 				self.tail.prev=self.tail.prev.prev
 				self.tail.prev.prev.next=self.tail
-				self.element.pop(self.tail.prev.key)
+
+
